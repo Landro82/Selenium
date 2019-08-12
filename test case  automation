@@ -1,0 +1,31 @@
+package Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestScript01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Setup Firefox driver 
+		System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\geckodriver-v0.24.0-win64\\geckodriver.exe");
+    	WebDriver driver = new FirefoxDriver();
+    	String baseUrl = "http://www.demo.guru99.com/V4/";
+    	
+    	// launch Firefox and direct it to the Base URL
+    	driver.get(baseUrl);
+
+
+	    // Enter username
+	    driver.findElement(By.name("uid")).sendKeys("mngr1336");
+
+	    // Enter Password
+	    driver.findElement(By.name("password")).sendKeys("dAnavUq");
+   
+	    // Click Login
+	    driver.findElement(By.name("btnLogin")).click();
+
+	}
+
+}
